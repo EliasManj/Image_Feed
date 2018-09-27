@@ -1,5 +1,7 @@
 # Image_Feed
 
+Hi 
+
 ## Project setup
 ```
 yarn install
