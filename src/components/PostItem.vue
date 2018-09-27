@@ -1,6 +1,7 @@
 <template>
     <div class="card" id="post-item">
         <div class="blog-grids">
+            <div class="grid"></div>
             <div class="grid">
                 <div class="entry-media">
                     <img v-bind:src="post.img" alt="">
@@ -15,6 +16,7 @@
                     </div>
                 </div>
             </div>
+            <div class="grid"></div>
         </div>
     </div>
 </template>

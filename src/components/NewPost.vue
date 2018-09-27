@@ -64,10 +64,10 @@ export default {
                 this.width = this.space;
                 this.marginLeft = this.space;
             } else {
+                this.display = 'none';
                 this.isClosed = true;
                 this.width = "0";
                 this.marginLeft = "0";
-                this.display = 'none';
             }
         }
     },

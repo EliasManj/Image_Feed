@@ -45,7 +45,6 @@ export default {
   },
   methods: {
     createNewPost(post){
-      console.log(post);
       this.posts.push(post);
     }
   }
