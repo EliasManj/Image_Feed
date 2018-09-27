@@ -82,7 +82,6 @@ export default {
             return this.marginLeft;
         },
         computedStyle: function(){
-            console.log(`'{width:"${this.computedWidth}";marginLeft:"${this.computedMargin}"}'`);
             return `{width:"${this.computedWidth}";marginLeft:"${this.computedMargin}"}`;    
         }
     }
