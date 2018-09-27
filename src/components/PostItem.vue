@@ -1,22 +1,23 @@
 <template>
-    <li class="list-group-item" id="post-item">
-                        <div class="blog-grids">
-                            <div class="grid">
-                                <div class="entry-media">
-                                    <img src="http://www.csshint.com/wp-content/uploads/2017/09/beautiful-buttons-effect.jpg" alt="">
-                                </div>
-                                <div class="entry-body">
-                                    <span class="cat">inspiration</span>
-                                    <h3><a href="#">Beautiful css3 buttons with hover effects</a></h3>
-                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut..</p>
-                                    <div class="read-more-date">
-                                        <a href="#">Read More..</a>
-                                        <span class="date">3 Hours ago</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    </li>
+    <div class="card" id="post-item">
+        <div class="blog-grids">
+            <div class="grid">
+                <div class="entry-media">
+                    <img v-bind:src="post.img" alt="">
+                </div>
+                <div class="entry-body">
+                    <span class="cat">{{post.name}}</span>
+                    <h3><a href="#">{{post.status}}</a></h3>
+                    <p>{{post.desc}}</p>
+                    <p>{{post.hospital}}</p>
+                    <div class="read-more-date">
+                        <a href="#">Read More..</a>
+                        <span class="date">3 Hours ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -28,11 +29,23 @@ export default {
 </script>
 
 <style>
+#post-item { 
+    background-color: #e9eef1;
+    margin: 0px;
+    padding: 0px;
+}
+
 @media (min-width: 1200px){
 .container {
     width: 1170px;
 }
 
+}
+
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
 }
 
 * {
