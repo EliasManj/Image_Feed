@@ -2,33 +2,38 @@
     <div id="feed">
         This is the feed component
         <br>
-        <ul>
-            <li v-for="post in posts" :key="post">
-                {{ post }}
-            </li>
+        <ul class="list-group">
+            <PostItem v-for="post in posts" v-bind:key="post.title" v-bind:post="post">
+                
+            </PostItem>
         </ul>
     </div>    
 </template>
 
 
 <script>
+import PostItem from './PostItem'
+
 export default {
+    components: {
+        PostItem
+    },
     data(){
         return {
             posts: [
                 {
-                    title: "post 1",
-                    desc: "soe decription",
-                    username: "poop22",
+                    title: 'post',
+                    desc: 'some desc',
+                    username: 'someone55',
                     img: null,
-                    likes: 0
+                    likes: 3
                 },
                 {
-                    title: "post 2",
-                    desc: "heyyy boiiii",
-                    username: "poop22",
+                    title: 'post2',
+                    desc: 'some descsda',
+                    username: 'someone55',
                     img: null,
-                    likes: 9999
+                    likes: 3
                 }
             ]
         }
