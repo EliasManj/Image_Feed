@@ -42,11 +42,19 @@ export default {
             marginLeft: '0',
             space: '250px',
             isClosed: true,
-            newPostInput: {}
+            newPostInput: {
+                name: "",
+                surenames: "",
+                status: "",
+                bloodType: "A+",
+                img: "",
+                hospital: ""
+            }
         }
     },
     methods: {
         submitNewPost(){
+            this.openNav();
             this.$emit('newPostEvent', this.newPostInput);
         },
         openNav(){
