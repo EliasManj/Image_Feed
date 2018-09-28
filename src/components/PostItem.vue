@@ -4,8 +4,7 @@
          <div class="col-md-1"></div>
             <div class="col-md-10 blogShort">
             <h1>{{post.name}}</h1>
-            <img src="http://www.kaczmarek-photo.com/wp-content/uploads/2012/06/guinnes-150x150.jpg" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail">
-                <em>This snippet use <a href="http://bootsnipp.com/snippets/featured/sexy-sidebar-navigation" target="_blank">Sexy Sidebar Navigation</a></em>
+                <em>{{post.bloodType}} <a href="http://bootsnipp.com/snippets/featured/sexy-sidebar-navigation" target="_blank">{{post.hospital}}</a></em>
             <article><p>
                 {{post.desc}}
                 </p></article>
@@ -25,6 +24,9 @@ export default {
 </script>
 
 <style>
+#blog {
+    padding:10px;
+}
 .blogShort{ border-bottom:1px solid #ddd;}
 .add{background: #333; padding: 10%; height: 300px;}
 

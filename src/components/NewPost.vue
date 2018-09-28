@@ -3,9 +3,8 @@
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <div class="btn btn-blog" @click="showForm">open</div>
-                <div v-bind:style="{display: computedDisplay}">
-                    <span>Add new person</span>
+                <div class="btn btn-blog" @click="showForm">Add new person</div>
+                <div>
                     <form id="NewPost" action="" v-show="isNinja">
                         <span>Name</span>
                         <input v-model="newPostInput.name" class="form-control" type="text">
@@ -66,9 +65,6 @@ export default {
         submitNewPost(){
             this.$emit('newPostEvent', this.newPostInput);
         }
-    },
-    computed: {
-
     }
 }
 </script>
