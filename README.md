@@ -1,6 +1,4 @@
-# Image_Feed
-
-New post branch 
+# Blood-Donations_Feed
 
 ## Project setup
 ```
