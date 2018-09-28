@@ -39,10 +39,7 @@
     <div class="row">
         <div class="appointments">
             <div class="table">
-                    <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Time</th>
-                    <th scope="col">Hospital</th>
+                    <th scope="col">Appointments Scheduled</th>
                 <tbody>
                     <div v-for="app in appointments" v-bind:key="app.name" class="appointment-item">
                         <tr>
