@@ -2,7 +2,7 @@
     <div id="feed">
         <br>
         <ul class="list-group">
-            <PostItem v-for="post in posts" v-bind:key="post.title" v-bind:post="post">
+            <PostItem @makeAppointment="onMakeAppointment" v-for="post in posts" v-bind:key="post.title" v-bind:post="post">
                 
             </PostItem>
         </ul>
@@ -23,6 +23,11 @@ export default {
     data(){
         return {
             
+        }
+    },
+    methods: {
+        onMakeAppointment(post){
+            this.$emit('makeAppoinment', post);
         }
     }
 }

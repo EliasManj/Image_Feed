@@ -1,15 +1,15 @@
 <template>
-  <div>
+  <div id="body">
     <navbar @goToNavLink="changeContext"/>
     <div id="app">
           <div id="new-post" v-show="newPostState">
             <NewPost v-on:newPostEvent="createNewPost" />
           </div>
           <div id="feed" v-show="feedState">
-            <Feed v-bind:posts="posts"/>
+            <Feed @makeAppoinment="passAppointmentToProfile" v-bind:posts="posts"/>
           </div>
           <div id="profile" v-show="profileState">
-            <Profile/>
+            <Profile v-bind:appointments="userAppointments" />
           </div>
     </div>
   </div>
@@ -27,6 +27,7 @@ export default {
     return {
       showFeed: true,
       showAddNewPost: false,
+      userAppointments: [],
       posts: [
       {
           name: 'Harold',
@@ -41,7 +42,7 @@ export default {
           name: 'Little Harold',
           surenames: 'The world',
           status: 'Severe ligma',
-          desc: '',
+          desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem',
           bloodType: 'O+',
           img: "https://pbs.twimg.com/profile_images/472457799977689088/pwdC20sR.jpeg",
           hospital: 'MD Andreson'
@@ -94,6 +95,10 @@ export default {
       } else {
         this.goToAddNewPostMethod();
       }
+    },
+    passAppointmentToProfile(post){
+      this.userAppointments.push(post);
+      console.log(this.userAppointments);
     }
   }
 }
@@ -107,5 +112,15 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#body {
+  background-color: #eaeded;
+  margin: 0px;
+}
+
+html {
+  background-color: #eaeded;
+  margin: 0px;
 }
 </style>

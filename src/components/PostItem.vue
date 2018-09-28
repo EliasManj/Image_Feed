@@ -8,7 +8,7 @@
             <article><p>
                 {{post.desc}}
                 </p></article>
-            <a class="btn btn-blog pull-right marginBottom10">READ MORE</a> 
+            <a class="btn btn-blog pull-right marginBottom10" @click="makeAppointment">MAKE APPOINTMENT</a> 
         </div>  
         <div class="col-md-1"></div> 
     </div>
@@ -19,6 +19,11 @@
 export default {
  props: {
     post: Object
+ },
+ methods: {
+    makeAppointment(){
+        this.$emit('makeAppointment', this.post);
+    }
  }
 }
 </script>
