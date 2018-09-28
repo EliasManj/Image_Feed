@@ -1,4 +1,4 @@
-# Blood-Donations_Feed
+# Image Feed
 
 ## Project setup
 ```
