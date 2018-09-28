@@ -1,11 +1,9 @@
 <template>
   <div id="app">
-    <div class="container">
         <NewPost v-on:newPostEvent="createNewPost" />
         <div id="main">
           <Feed v-bind:posts="posts"/>
         </div>
-    </div>
   </div>
 </template>
 
@@ -22,7 +20,7 @@ export default {
           name: 'Harold',
           surenames: 'Smith',
           status: 'yo waddup boiii',
-          desc: 'harold le gusta las caminatas en la playa y bailer',
+          desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry printing and typesetting industry. Lorem Ipsum has been the industry printing and typesetting industry. Lorem Ipsum has been the industry',
           bloodType: 'O+',
           img: "https://hungarytoday.hu/wp-content/uploads/2018/02/18ps27.jpg",
           hospital: 'Hospital 3333'
@@ -59,10 +57,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
 }
 </style>

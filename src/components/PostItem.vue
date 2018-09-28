@@ -1,24 +1,19 @@
 <template>
-    <div class="card" id="post-item">
-        <div class="blog-grids">
-            <div class="grid"></div>
-            <div class="grid">
-                <div class="entry-media">
-                    <img v-bind:src="post.img" alt="">
-                </div>
-                <div class="entry-body">
-                    <span class="cat">{{post.name}}</span>
-                    <h3><a href="#">{{post.status}}</a></h3>
-                    <p>{{post.desc}}</p>
-                    <div class="read-more-date">
-                        <a href="#">Read More..</a>
-                        <span class="date">3 Hours ago</span>
-                    </div>
-                </div>
-            </div>
-            <div class="grid"></div>
-        </div>
+<div class="container">
+	 <div id="blog" class="row"> 
+         <div class="col-md-1"></div>
+            <div class="col-md-10 blogShort">
+            <h1>{{post.name}}</h1>
+            <img src="http://www.kaczmarek-photo.com/wp-content/uploads/2012/06/guinnes-150x150.jpg" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail">
+                <em>This snippet use <a href="http://bootsnipp.com/snippets/featured/sexy-sidebar-navigation" target="_blank">Sexy Sidebar Navigation</a></em>
+            <article><p>
+                {{post.desc}}
+                </p></article>
+            <a class="btn btn-blog pull-right marginBottom10">READ MORE</a> 
+        </div>  
+        <div class="col-md-1"></div> 
     </div>
+</div>
 </template>
 
 <script>
@@ -30,108 +25,25 @@ export default {
 </script>
 
 <style>
-#post-item { 
-    background-color: #e9eef1;
-    margin: 0px;
-    padding: 0px;
+.blogShort{ border-bottom:1px solid #ddd;}
+.add{background: #333; padding: 10%; height: 300px;}
+
+.btn-blog {
+    color: #ffffff;
+    background-color: #37d980;
+    border-color: #37d980;
+    border-radius:0;
+    margin-bottom:10px
 }
-
-@media (min-width: 1200px){
-.container {
-    width: 1170px;
+.btn-blog:hover,
+.btn-blog:focus,
+.btn-blog:active,
+.btn-blog.active,
+.open .dropdown-toggle.btn-blog {
+    color: white;
+    background-color:#34ca78;
+    border-color: #34ca78;
 }
-
-}
-
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.row {
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-.col-xs-12 {
-    width: 100%;
-}
-
-.blog-grids {
-    overflow: hidden;
-    margin: 0 -15px;
-}
-
-.blog-grids .grid {
-    background-color: #fff;
-    width: calc(33.33% - 30px);
-    float: left;
-    padding: 15px;
-    margin: 20px 15px 15px;
-    border-radius: 10px;
-    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-}
-
-.entry-media img {
-    border-radius: 10px;
-    width: 100%;
-    max-height: 188px;
-}
-
-.entry-body {
-    padding: 27px 10px;
-}
-
-.entry-body .cat {
-    font-family: "Poppins", sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    color: #6220d9;
-    text-transform: uppercase;
-}
-
-.entry-body h3 {
-    font-size: 21px;
-    font-weight: 600;
-    line-height: 1.30em;
-    margin: 3px 0 0.73em;
-}
-
-.entry-body h3 a {
-    color: #41516a;
-}
-
-.entry-body h3 a:hover {
-    color: #6220d9;
-    text-decoration: none;
-}
-
-.entry-body p {
-    margin-bottom: 2em;
-    color: #90949a;
-    line-height: 1.8em;
-}
-
-.read-more-date {
-    position: relative;
-}
-
-.read-more-date a {
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    font-size: 1.06667rem;
-    font-weight: 600;
-    color: #41516a;
-    text-transform: uppercase;
-}
-
-.read-more-date .date {
-    position: absolute;
-    right: 0;
-    color: #90949a;
-}
-
-
+ h2{color:#34ca78;}
+ .margin10{margin-bottom:10px; margin-right:10px;}
 </style>
