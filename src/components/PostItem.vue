@@ -10,6 +10,7 @@
                 {{post.desc}}
                 </p></article>
             <a class="btn btn-blog pull-right marginBottom10" @click="makeAppointment">MAKE APPOINTMENT</a> 
+            <div class="bold-text" v-show="scheduled">Scheduled</div>
         </div>  
         <div class="col-md-1"></div> 
     </div>
@@ -18,12 +19,20 @@
 
 <script>
 export default {
- props: {
+    data(){
+        return {
+            scheduled: false
+        }
+    },
+    props: {
     post: Object
- },
- methods: {
+    },
+    methods: {
     makeAppointment(){
-        this.$emit('makeAppointment', this.post);
+        if(this.scheduled == false){
+            this.scheduled = true;
+            this.$emit('makeAppointment', this.post);
+        }
     }
  }
 }
