@@ -2,13 +2,13 @@
   <div>
     <navbar @goToNavLink="changeContext"/>
     <div id="app">
-          <div id="feed" v-show="showFeed">
+          <div id="new-post" v-show="newPostState">
             <NewPost v-on:newPostEvent="createNewPost" />
-            <div id="main">
-              <Feed v-bind:posts="posts"/>
-            </div>
           </div>
-          <div id="profile" v-show="!showFeed">
+          <div id="feed" v-show="feedState">
+            <Feed v-bind:posts="posts"/>
+          </div>
+          <div id="profile" v-show="profileState">
             <Profile/>
           </div>
     </div>
@@ -26,6 +26,7 @@ export default {
   data(){
     return {
       showFeed: true,
+      showAddNewPost: false,
       posts: [
       {
           name: 'Harold',
@@ -54,6 +55,18 @@ export default {
     NewPost,
     Profile
   },
+  computed: {
+      feedState: function() {
+        return this.showFeed == true && this.showAddNewPost == false;
+      },
+      newPostState: function(){
+        return this.showFeed == false && this.showAddNewPost == true;
+      },
+      profileState: function(){
+        return this.showFeed == false && this.showAddNewPost == false;
+      }
+
+  },
   methods: {
     createNewPost(post){
       this.posts.push(post);
@@ -63,15 +76,23 @@ export default {
     },
     goToFeedMethod(){
       this.showFeed = true;
+      this.showAddNewPost = false;
     },
     goToProfileMethod(){
       this.showFeed = false;
+      this.showAddNewPost = false;
+    },
+    goToAddNewPostMethod(){
+      this.showFeed = false;
+      this.showAddNewPost = true;
     },
     changeContext(label){
-      if(label==="Donation feed"){
+      if(label==="Feed"){
         this.goToFeedMethod();
-      } else {
+      } else if(label==="Profile"){
         this.goToProfileMethod();
+      } else {
+        this.goToAddNewPostMethod();
       }
     }
   }

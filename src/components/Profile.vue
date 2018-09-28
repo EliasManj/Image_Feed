@@ -17,6 +17,10 @@
                 <td>Male</td>
             </tr>
             <tr>
+                <th scope="row">Units Donated</th>
+                <td>4</td>
+            </tr>
+            <tr>
                 <th scope="row">Home Address</th>
                 <td>Main ave. #3424 Irvine Cal.</td>
             </tr>

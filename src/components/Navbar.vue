@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">My first Vue app</a>
+    <a class="navbar-brand" href="#">Donations Feed</a>
 
     <button class="navbar-toggler" @click="collapse=!collapse" type="button">
       <span class="navbar-toggler-icon"></span>
@@ -9,9 +9,11 @@
     <div :class="{'collapse':collapse, 'navbar-collapse':true}">
       <ul class="navbar-nav">
 
-        <navbar-link @linkClicked="changeComponentPage" to="/" label="Donation feed"/>
+        <navbar-link @linkClicked="changeComponentPage" to="/" label="Feed"/>
 
-        <navbar-link @linkClicked="changeComponentPage" to="/movies" label="Profile"/>
+        <navbar-link @linkClicked="changeComponentPage" to="/" label="Request New Donor"/>
+
+        <navbar-link @linkClicked="changeComponentPage" to="/" label="Profile"/>
 
       </ul>
     </div>
