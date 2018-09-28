@@ -5,6 +5,7 @@
             <div class="col-md-10 blogShort">
             <h1>{{post.name}}</h1>
                 <em>{{post.bloodType}} <a href="http://bootsnipp.com/snippets/featured/sexy-sidebar-navigation" target="_blank">{{post.hospital}}</a></em>
+                <br><div class="bold-text">{{post.status}}</div>
             <article><p>
                 {{post.desc}}
                 </p></article>
@@ -53,4 +54,8 @@ export default {
 }
  h2{color:#34ca78;}
  .margin10{margin-bottom:10px; margin-right:10px;}
+
+ .bold-text{
+     font-weight:bold;
+ }
 </style>

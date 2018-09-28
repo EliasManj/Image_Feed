@@ -32,20 +32,42 @@ export default {
       {
           name: 'Harold',
           surenames: 'Smith',
-          status: 'yo waddup boiii',
+          status: 'Ligma',
           desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry printing and typesetting industry. Lorem Ipsum has been the industry printing and typesetting industry. Lorem Ipsum has been the industry',
           bloodType: 'O+',
           img: "https://hungarytoday.hu/wp-content/uploads/2018/02/18ps27.jpg",
-          hospital: 'Hospital 3333'
+          hospital: 'Hospital 3333',
+          id: '1'
       },
       {
           name: 'Little Harold',
           surenames: 'The world',
-          status: 'Severe ligma',
-          desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem',
-          bloodType: 'O+',
+          status: 'Tugma',
+          desc: 'Little Harold is sick with severe tugma :( please help him he is gonna die. He like roast beef, chicken and pizza. He likes long walks on the beach and he sometimes dreams about cheese',
+          bloodType: 'A+',
           img: "https://pbs.twimg.com/profile_images/472457799977689088/pwdC20sR.jpeg",
-          hospital: 'MD Andreson'
+          hospital: 'MD Andreson',
+          id: 2
+      },
+      {
+          name: 'John Doe',
+          surenames: 'Joestar',
+          status: 'Super Sugma',
+          desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem',
+          bloodType: 'A+',
+          img: "https://pbs.twimg.com/profile_images/472457799977689088/pwdC20sR.jpeg",
+          hospital: 'Hospital New Hope',
+          id: 2
+      },
+      {
+          name: 'Baron Zeppeli',
+          surenames: 'Joestar',
+          status: 'Super Mega Apendicitis',
+          desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem',
+          bloodType: 'B+',
+          img: "https://pbs.twimg.com/profile_images/472457799977689088/pwdC20sR.jpeg",
+          hospital: 'Kanye Hospital',
+          id: 2
       }
     ]
     }

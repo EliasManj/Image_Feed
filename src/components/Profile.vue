@@ -39,14 +39,14 @@
     <div class="row">
         <div class="appointments">
             <div class="table">
-                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
                     <th scope="col">Name</th>
                     <th scope="col">Time</th>
                     <th scope="col">Hospital</th>
                 <tbody>
                     <div v-for="app in appointments" v-bind:key="app.name" class="appointment-item">
                         <tr>
-                            <th scope="row">2</th>
+                            <th scope="row">{{ app.id }}</th>
                             <td>{{ app.name }}</td>
                             <td>7:00 AM</td>
                             <td>{{ app.hospital }}</td>

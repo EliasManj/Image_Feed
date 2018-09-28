@@ -54,7 +54,8 @@ export default {
                 status: "",
                 bloodType: "A+",
                 img: "",
-                hospital: ""
+                hospital: "",
+                id: 0
             }
         }
     },
@@ -63,6 +64,7 @@ export default {
             this.isNinja = !this.isNinja;
         },
         submitNewPost(){
+            this.newPostInput.id = this.newPostInput.id + 1;
             this.$emit('newPostEvent', this.newPostInput);
         }
     }
