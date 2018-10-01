@@ -1,5 +1,7 @@
 # Image Feed
 
+Simple project with Vue.js 
+
 ## Project setup
 ```
 yarn install
